@@ -1,0 +1,6 @@
+num1=int(input("Digite o primeiro Número:"))
+num2=int(input("Digite o segundo Número:"))
+print(f"A soma de {num1} e {num2} é {num1+num2}.")
+print(f"A subtração de {num1} e {num2} é {num1-num2}.")
+print(f"A multiplicação de {num1} e {num2} é {num1*num2}.")
+print(f"A divisão de {num1} e {num2} é {num1/num2}.")
