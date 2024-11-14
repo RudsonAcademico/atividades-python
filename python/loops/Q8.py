@@ -5,11 +5,17 @@ Continue pedindo ao usuário para adivinhar até que ele acerte o número utiliz
 """
 from random import randint
 n=randint(0, 100)
-p=int(input("Tente adivinhar um numero: "))
+p=int(input("Tente adivinhar o numero: "))
+t=1
 while p != n:
     if p > n:
         print("Menos")
     elif p < n:
         print("Mais")
-    p=int(input("Tente adivinhar um numero: "))
-print("Correto!")
+    else:
+        print(f"Você Ganhou! com {t} tentativas")
+    p=int(input("Tente adivinhar o numero: "))
+    t+=1
+    if t >= 5:
+        p=n
+        print("Você Perdeu!")
