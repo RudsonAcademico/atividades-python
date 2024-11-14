@@ -18,4 +18,4 @@ while p != n:
     t+=1
     if t >= 5:
         p=n
-        print("Você Perdeu!")
+        print(f"Você Perdeu! A resposta era {p}")
