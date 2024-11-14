@@ -4,9 +4,11 @@ O programa deve informar se o palpite é muito alto, muito baixo ou correto.
 Continue pedindo ao usuário para adivinhar até que ele acerte o número utilizando um loop "while".
 """
 from random import randint
-n=randint(0, 100)
-p=int(input("Tente adivinhar o numero: "))
+MIN, MAX = 0, 100
+n=randint(MIN, MAX)
+p=int(input(f"Tente adivinhar o numero entre {MIN} e {MAX}: "))
 t=1
+MT = 5
 while p != n:
     if p > n:
         print("Menos")
@@ -16,6 +18,6 @@ while p != n:
         print(f"Você Ganhou! com {t} tentativas")
     p=int(input("Tente adivinhar o numero: "))
     t+=1
-    if t >= 5:
+    if t >= MT:
         p=n
         print(f"Você Perdeu! A resposta era {p}")
