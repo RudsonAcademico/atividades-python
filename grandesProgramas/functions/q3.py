@@ -2,7 +2,7 @@
 Crie uma função chamada saudacao_personalizada que aceita um nome e um idioma como argumentos.
 O idioma é opcional e padrão para "inglês". A função deve retornar uma saudação no idioma especificado.
 """
-def saudacao_personalizada(nome, idioma):
+def saudacao_personalizada(nome:str, idioma:str) -> str:
     match idioma:
         case "japonês" | '1':
             return(f"Kon'nichiwa {nome}-san")
