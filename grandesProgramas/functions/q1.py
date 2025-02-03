@@ -149,3 +149,42 @@ def min_custom(lista):
     else:
         minimo = None
     return minimo
+
+"""
+Crie uma função chamada startswith_custom que aceita uma string e um prefixo
+como argumentos e retorna True se a string começar com o prefixo, caso contrário, retorna False.
+Ela deve ter o mesmo comportamento que o método str.startswith().
+"""
+def startswith_custom(texto, prefixo):
+    tamanho = len(prefixo)
+    if texto[0:tamanho] == prefixo:
+        return True
+    else:
+        return False
+
+"""
+Crie uma função chamada endswith_custom que aceita uma string e um sufixo como argumentos e retorna True se a string
+terminar com o sufixo, caso contrário, retorna False.
+Ela deve ter o mesmo comportamento que o método str.endswith().
+"""
+def endswith_custom(texto, prefixo):
+    tamanho = len(prefixo)
+    if texto[-tamanho:] == prefixo:
+        return True
+    else:
+        return False
+
+"""
+Crie uma função chamada split_custom que aceita uma string e um caractere de separação como argumentos e retorna
+uma lista de substrings separadas pelo caractere de separação. Ela deve ter o mesmo comportamento que o método str.split().
+"""
+
+def split_custom(texto, separador):
+    quantidade = texto.count(separador)
+    lista = []
+    item = ""
+    for i in range(quantidade,0):
+        for x in texto:
+            if x != separador:
+                item+=x
+            
